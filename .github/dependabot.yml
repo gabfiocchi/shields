@@ -1,0 +1,41 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.11.6
+    - 7.13.15
+  - dependency-name: gatsby-plugin-catch-links
+    versions:
+    - 2.7.0
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.11.0
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: eslint-plugin-cypress
+    versions:
+    - 2.11.1
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
+- package-ecosystem: npm
+  directory: "/gh-badges"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: svgo
+    versions:
+    - 2.0.3
+    - 2.1.0
+    - 2.2.1
+    - 2.2.2
